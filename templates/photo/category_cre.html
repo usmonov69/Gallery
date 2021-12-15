@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{%  load crispy_forms_tags %}
+{% block content %}
+
+    <div class="site-section"  data-aos="fade">
+      <div class="container">
+
+ 
+        <div class="row">
+          <div class="col-lg-8 mb-5">
+            {% if  user.is_staff %}
+            <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  {{ form| crispy }}
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Submit" class="btn btn-primary py-2 px-4 text-white">
+                </div>
+              </div>
+
+            </form>
+              {% else %}
+               <h1> You are not allowed</h1> 
+              {% endif %}
+          </div>
+          
+
+   </div>
+</div>
+{% endblock content %}

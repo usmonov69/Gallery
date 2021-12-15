@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="site-section"  data-aos="fade">
+      <div class="container-fluid">
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-7">
+            <div class="row mb-5">
+              <div class="col-12 ">
+                <h2 class="site-section-heading text-center">{{ account.user }}</h2>
+                <center> <i class="far fa-clock"></i>{{ account.joined }}</center>
+                <center><h4>Nobody can see your pictures!</h4></center>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="row">
+              {%  for photo in photos %}
+          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
+            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
+              <!-- <span class="icon flaticon-camera display-3 text-primary mb-4 d-block"></span> -->
+            
+              <img style=" height: 324px; width: 100%; border-radius: 5px;" src="{{ photo.image.url }}">
+              <h3 class="text-white h4 pt-4">{{ photo.title | linebreaks |  truncatechars:28 }}</h3>
+              <div><i class="icon-clock-o" aria-hidden="true"></i> {{photo.timestamp | timesince }}</div>
+              <p>{{ photo.category }}</p>
+            <a href="{%  url 'photo:update-photo' photo.id %}">update</a><br>
+            <a href="{% url 'photo:delete-photo' photo.id %}">delete</a>
+            </div>
+          </div>
+
+          
+              {% endfor %}
+<i class="far fa-clock"></i>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+{% endblock content %}
