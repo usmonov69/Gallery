@@ -21,7 +21,7 @@
           {% for photo in photos %}
 
            <div  class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="{{ photo.image.url }}" data-sub-html="<h4>{{ photo.title |title }}</h4><p>{{ photo.category }}</p>">
-            <a href="#"><img style="height: 218px;" src="{{ photo.image.url }}" alt="IMage" class="img-fluid"></a>
+            <a href="#"><img style="width: 332px; height: 218px;" src="{{ photo.image.url }}" alt="IMage" class="img-fluid"></a>
           </div>
             {% endfor %}
         </div>
