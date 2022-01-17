@@ -2,14 +2,10 @@
 {% load static %}
 {% block content %}
 
-
- 
-
     <div class="container-fluid" data-aos="fade" data-aos-delay="500">
       <div class="row">
       {% for cat in category %}
         <div class="col-lg-4">
-
           <div class="image-wrap-2">
             <div class="image-info">
               <h2 class="mb-3">{{ cat.name }}</h2>
@@ -17,18 +13,10 @@
             </div>
             <img style="height: 442px; width: 448px;" src="{{ cat.thumbnail.url }}" alt="Image" class="img-fluid">
           </div>
-
         </div>
         {% endfor %}
-     
       </div>
-    </div>
-
-
-
-    
-    
+    </div>    
   </div>
-
 
 {% endblock content %}
