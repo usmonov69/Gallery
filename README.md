@@ -3,7 +3,7 @@
 In this web project you will find pictures and of course you can also upload your own photos 
 The project uses a django-all-auth system where no one can see your photos.
 
-Gallery🔗: http://gallery77.pythonanywhere.com/
+Gallery🔗: https://galleryco.pythonanywhere.com/
 
 ![Screenshot_3](https://user-images.githubusercontent.com/83788662/146151663-2018f917-a417-48a0-9032-cc49aa39b2eb.jpg)
 
